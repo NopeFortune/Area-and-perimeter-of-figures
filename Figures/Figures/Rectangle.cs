@@ -1,12 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Figures
 {
-    class Rectangle
+    public class Rectangle : Figure
     {
+        private double A;
+        private double B;
+
+        public Rectangle(double a, double b)
+        {
+            A = a;
+            B = b;
+        }
+        public override double Area()
+        {
+            return A * B;
+        }
+
+        public override double Perimeter()
+        {
+            return 2 * (A + B);
+        }
     }
 }

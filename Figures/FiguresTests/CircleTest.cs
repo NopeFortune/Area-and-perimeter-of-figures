@@ -23,7 +23,6 @@ namespace FiguresTests
         }
 
         [TestMethod]
-
         public void CircleAreaTest()
         {
             // Arrange
@@ -36,6 +35,22 @@ namespace FiguresTests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CircleException))]
+        public void CircleZeroRadiusTestMethod()
+        {
+            double radius = 0;
+
+            try
+            {
+                Circle circle = new Circle(radius);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

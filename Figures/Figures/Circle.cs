@@ -8,6 +8,7 @@ namespace Figures
 
         public Circle(double radius)
         {
+            CanExist(radius);
             Radius = radius;
         }
 
@@ -19,6 +20,14 @@ namespace Figures
         public override double Perimeter()
         {
             return Math.Round((2 * Math.PI * Radius), 1);
+        }
+
+        public void CanExist(double radius)
+        {
+            if (radius <= 0)
+            {
+                throw new CircleException("Радиус должен быть положительным числом.");
+            }
         }
     }
 }

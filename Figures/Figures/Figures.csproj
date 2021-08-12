@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.cs" />
+    <Compile Include="CircleException.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="Parallelogram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

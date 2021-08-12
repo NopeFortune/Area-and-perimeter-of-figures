@@ -7,11 +7,13 @@ namespace Figures
         private double A;
         private double B;
         private double H;
+
         public Parallelogram(double a, double b, double h)
         {
+            CanExist(a,b,H);
             A = a;
             B = b;
-            H = h;
+            H = h;  
         }
         public override double Area()
         {
@@ -21,6 +23,14 @@ namespace Figures
         public override double Perimeter()
         {
             return 2 * (A + B);
+        }
+
+        public void CanExist(double a, double b, double h)
+        {
+            if (a <= 0 || b <= 0 || h <= 0)
+            {
+                throw new ParallelogramException("Сторона и/или высота должны быть больше нуля.");
+            }
         }
     }
 }

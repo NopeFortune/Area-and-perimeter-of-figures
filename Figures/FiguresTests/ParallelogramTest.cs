@@ -40,5 +40,23 @@ namespace FiguresTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ParallelogramException))]
+        public void ParallelogramZeroSideTestMethod()
+        {
+            double a = 0;
+            double b = 0;
+            double h = 0;
+
+            try
+            {
+                Parallelogram parallelogram = new Parallelogram(a, b, h);
+            }
+            catch (ParallelogramException)
+            {
+                throw;
+            }
+        }
     }
 }

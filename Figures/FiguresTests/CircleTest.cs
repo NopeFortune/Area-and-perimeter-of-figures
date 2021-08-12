@@ -47,7 +47,7 @@ namespace FiguresTests
             {
                 Circle circle = new Circle(radius);
             }
-            catch (Exception)
+            catch (CircleException)
             {
                 throw;
             }

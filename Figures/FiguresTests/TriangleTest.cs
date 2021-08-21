@@ -12,10 +12,10 @@ namespace FiguresTests
         {
             // Arrange
             double A = 2;
-            double B = 4;
-            double C = 6;
+            double B = 2;
+            double C = 2;
             double H = 3;
-            double expected = 12;
+            double expected = 6;
 
             // Act
             Triangle triangle = new Triangle(A, B, C, H);
@@ -31,10 +31,10 @@ namespace FiguresTests
         {
             // Arrange
             double A = 2;
-            double B = 4;
-            double C = 6;
-            double H = 3;
-            double expected = 6;
+            double B = 2;
+            double C = 2;
+            double H = 2;
+            double expected = 2;
 
             // Act
             Triangle triangle = new Triangle(A, B, C, H);
@@ -42,6 +42,44 @@ namespace FiguresTests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(TriangleException))]
+        public void TriangleZeroSideTestMethod()
+        {
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            double h = 0;
+
+            try
+            {
+                Triangle triangle = new Triangle(a, b, c, h);
+            }
+            catch(TriangleException)
+            {
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(TriangleException))]
+        public void TriangleOneSideBiggerThanSumOfTwoOtherSidesTestMethod()
+        {
+            double a = 4;
+            double b = 2;
+            double c = 2;
+            double h = 1;
+
+            try
+            {
+                Triangle triangle = new Triangle(a, b, c, h);
+            }
+            catch(TriangleException)
+            {
+                throw;
+            }
         }
     }
 }

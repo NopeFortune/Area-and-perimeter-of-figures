@@ -37,5 +37,22 @@ namespace FiguresTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(RectangleException))]
+        public void RectangleZeroSideTestMethod()
+        {
+            double a = 0;
+            double b = 0;
+
+            try
+            {
+                Rectangle rectangle = new Rectangle(a, b);
+            }
+            catch (RectangleException)
+            {
+                throw;
+            }
+        }
     }
 }

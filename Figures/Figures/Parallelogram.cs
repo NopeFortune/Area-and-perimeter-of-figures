@@ -10,7 +10,7 @@ namespace Figures
 
         public Parallelogram(double a, double b, double h)
         {
-            CanExist(a,b,H);
+            CanExist(a,b,h);
             A = a;
             B = b;
             H = h;  
@@ -29,7 +29,7 @@ namespace Figures
         {
             if (a <= 0 || b <= 0 || h <= 0)
             {
-                throw new ParallelogramException("Сторона и/или высота должны быть больше нуля.");
+                throw new ParallelogramException("Сторона и/или высота должны быть положительным числом.");
             }
         }
     }

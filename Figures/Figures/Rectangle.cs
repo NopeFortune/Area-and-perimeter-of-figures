@@ -9,6 +9,7 @@ namespace Figures
 
         public Rectangle(double a, double b)
         {
+            CanExist(a, b);
             A = a;
             B = b;
         }
@@ -20,6 +21,14 @@ namespace Figures
         public override double Perimeter()
         {
             return 2 * (A + B);
+        }
+
+        public void CanExist(double a, double b)
+        {
+            if (a == 0 || b == 0)
+            {
+                throw new RectangleException("Одна из сторон должна быть положительным числом.");
+            }
         }
     }
 }

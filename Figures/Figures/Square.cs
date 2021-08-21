@@ -8,6 +8,7 @@ namespace Figures
 
         public Square(double a)
         {
+            CanExist(a);
             A = a;
         }
 
@@ -19,6 +20,14 @@ namespace Figures
         public override double Perimeter()
         {
             return 4 * A;
+        }
+
+        public void CanExist(double a)
+        {
+            if (a <= 0)
+            {
+                throw new SquareException("Сторона должна быть положительным числом.");
+            }
         }
     }
 }

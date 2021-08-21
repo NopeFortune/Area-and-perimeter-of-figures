@@ -52,6 +52,7 @@
     <Compile Include="Rhomb.cs" />
     <Compile Include="RhombException.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="SquareException.cs" />
     <Compile Include="Trapezoid.cs" />
     <Compile Include="Triangle.cs" />
   </ItemGroup>

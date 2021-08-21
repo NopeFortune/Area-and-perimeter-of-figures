@@ -36,5 +36,21 @@ namespace FiguresTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(SquareException))]
+        public void SquareZeroSideTestMethod()
+        {
+            double a = 0;
+
+            try
+            {
+                Square square = new Square(a);
+            }
+            catch(SquareException)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -28,14 +28,32 @@ namespace FiguresTests
         {
             // Arrange
             double A = 2;
-            double H = 0;
+            double H = 1;
             double expected = 8;
 
             // Act
             Rhomb rhomb = new Rhomb(A, H);
             double actual = rhomb.Area();
+
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(RhombException))]
+        public void RhombZeroSideTestMethod()
+        {
+            double a = 0;
+            double h = 0;
+
+            try
+            {
+                Rhomb rhomb = new Rhomb(a, h);
+            }
+            catch(RhombException)
+            {
+                throw;
+            }
         }
     }
 }

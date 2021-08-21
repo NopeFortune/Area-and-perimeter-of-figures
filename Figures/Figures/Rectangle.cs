@@ -25,7 +25,7 @@ namespace Figures
 
         public void CanExist(double a, double b)
         {
-            if (a == 0 || b == 0)
+            if (a <= 0 || b <= 0)
             {
                 throw new RectangleException("Одна из сторон должна быть положительным числом.");
             }

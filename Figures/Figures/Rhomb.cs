@@ -9,6 +9,7 @@ namespace Figures
 
         public Rhomb(double a, double h)
         {
+            CanExist(a, h);
             A = a;
             H = h;
         }
@@ -21,6 +22,14 @@ namespace Figures
         public override double Perimeter()
         {
             return A * H;
+        }
+
+        public void CanExist(double a, double h)
+        {
+            if (a <= 0 || h <= 0)
+            {
+                throw new RhombException("Сторона и/или высота должна быть положительным числом и больше нуля.");
+            }
         }
     }
 }

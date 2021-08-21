@@ -50,6 +50,7 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="RectangleException.cs" />
     <Compile Include="Rhomb.cs" />
+    <Compile Include="RhombException.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Trapezoid.cs" />
     <Compile Include="Triangle.cs" />

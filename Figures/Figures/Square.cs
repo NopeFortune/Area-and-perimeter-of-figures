@@ -26,7 +26,7 @@ namespace Figures
         {
             if (a <= 0)
             {
-                throw new SquareException("Сторона должна быть положительным числом.");
+                throw new SquareException("Сторона должна быть положительным числом и больше нуля.");
             }
         }
     }

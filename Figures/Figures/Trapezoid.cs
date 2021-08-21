@@ -12,6 +12,7 @@ namespace Figures
 
         public Trapezoid(double a, double b, double c, double d, double h)
         {
+            CanExist(a, b, c, d, h);
             A = a;
             B = b;
             C = c;
@@ -26,6 +27,14 @@ namespace Figures
         public override double Perimeter()
         {
             return A + B + C + D;
+        }
+
+        public void CanExist(double a, double b, double c, double d, double h)
+        {
+            if (a <= 0 || b <= 0 || c <= 0 || d <= 0 || h <= 0)
+            {
+                throw new TrapezoidException("Сторона и/или выоста должны быть положительным числом и больше нуля.");
+            }
         }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="Square.cs" />
     <Compile Include="SquareException.cs" />
     <Compile Include="Trapezoid.cs" />
+    <Compile Include="TrapezoidException.cs" />
     <Compile Include="Triangle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

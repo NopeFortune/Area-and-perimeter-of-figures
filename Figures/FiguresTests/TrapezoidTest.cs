@@ -44,5 +44,25 @@ namespace FiguresTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(TrapezoidException))]
+        public void TrapezoidZeroSideTestMethod()
+        {
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            double d = 0;
+            double h = 0;
+
+            try
+            {
+                Trapezoid trapezoid = new Trapezoid(a, b, c, d, h);
+            }
+            catch (TrapezoidException)
+            {
+                throw;
+            }
+        }
     }
 }

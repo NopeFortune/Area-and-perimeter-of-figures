@@ -29,7 +29,7 @@ namespace Figures
         {
             if (a <= 0 || b <= 0 || h <= 0)
             {
-                throw new ParallelogramException("Сторона и/или высота должны быть положительным числом.");
+                throw new ParallelogramException("Сторона и/или высота должны быть положительным числом и больше нуля.");
             }
         }
     }

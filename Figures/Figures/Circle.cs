@@ -26,7 +26,7 @@ namespace Figures
         {
             if (radius <= 0)
             {
-                throw new CircleException("Радиус должен быть положительным числом.");
+                throw new CircleException("Радиус должен быть положительным числом и больше нуля.");
             }
         }
     }
